@@ -1,0 +1,53 @@
+.App {
+  background-color: ghostwhite;
+  height:100vh;
+}
+
+.logo {
+  width: 2.5%;
+}
+
+.logo:hover {
+  cursor: crosshair;
+}
+
+.navTitle {
+  color: #ffc246;
+  width: 200%;
+  margin: auto;
+  margin-right: 1%;
+}
+
+.LandingTop {
+  display: flex;
+  width: 80vw;
+  /* background-color: red; */
+  margin: auto;
+  margin-top: 2%;
+  justify-content: space-evenly;
+}
+
+.mainlogo {
+  width: 10%;
+}
+
+.LandingTopText {
+  font-size: 1.5rem;;
+}
+
+.LandingBottom {
+  width: 70vw;
+  margin: auto;
+  margin-top: 2%;
+  text-align: center;
+}
+
+.LangFlag {
+  width: 50%;
+  margin-top: 2%;
+}
+
+.FooterText {
+  text-align: center;
+  width:100vw;
+}
