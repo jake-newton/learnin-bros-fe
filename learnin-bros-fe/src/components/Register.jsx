@@ -116,7 +116,8 @@ const Register = (props) => {
                 console.log(result)
                 localStorage.setItem("token", result.data.token);    
                 setUser({ name: '', password: ''})
-                          props.history.push("/dashboard")
+                props.onChange();
+                props.history.push("/dashboard")
                   })
                   .catch(error => {
                     console.log(error)

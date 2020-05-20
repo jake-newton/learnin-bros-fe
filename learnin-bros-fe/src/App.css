@@ -18,6 +18,10 @@
   margin-right: 1%;
 }
 
+.navTitle:hover {
+  cursor: pointer;
+}
+
 .LandingTop {
   display: flex;
   width: 80vw;

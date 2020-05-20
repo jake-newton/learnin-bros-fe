@@ -6,7 +6,6 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import '../App.css'
 import { red, grey, blue, green } from '@material-ui/core/colors';
 import { createMuiTheme } from '@material-ui/core/styles';
 
@@ -59,16 +58,14 @@ function goToLanding() {
     window.location.assign('http://localhost:3000/');
   }
 
-function goToReg() {
-  window.location.assign('http://localhost:3000/register');
-}
-
-function goToLog() {
-    window.location.assign('http://localhost:3000/login');
-  }
-
-function Nav() {
+function LoggedIn() {
   const classes = useStyles();
+
+  const logout = () => {
+    localStorage.removeItem("token");
+    window.location.assign('http://localhost:3000/')
+    
+}
 
   return (
     <div className={classes.root}>
@@ -77,12 +74,11 @@ function Nav() {
           <h3 onClick={goToLanding} className="navTitle">LanguageBros</h3>
           {/* <img onClick={goToLanding} className='logo' src={require("../images/bros-logo-orange.png")}> */}
           {/* </img> */}
-          <Button onClick={goToReg} className={classes.regButton} color="inherit">Register</Button>
-          <Button onClick={goToLog} className={classes.logButton} color="inherit">Login</Button>
+          <Button onClick={logout} className={classes.logButton} color="inherit">Logout</Button>
         </Toolbar>
       </AppBar>
     </div>
   );
 }
 
-export default Nav;
+export default LoggedIn;
