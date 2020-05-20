@@ -95,7 +95,6 @@ const Register = (props) => {
         const [user, setUser] = useState({ "name": '', "password": ''})
     
     const changeHandler = event => {
-    
         event.preventDefault();
         setUser({...user, [event.target.name]: event.target.value })
     }
@@ -117,7 +116,7 @@ const Register = (props) => {
                 localStorage.setItem("token", result.data.token);    
                 setUser({ name: '', password: ''})
                 props.onChange();
-                props.history.push("/dashboard")
+                props.history.push("/intercept")
                   })
                   .catch(error => {
                     console.log(error)

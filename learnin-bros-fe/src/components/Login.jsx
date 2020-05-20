@@ -102,8 +102,9 @@ const Login = (props) => {
             console.log(result)
             localStorage.setItem("token", result.data.token);    
             setUser({ name: '', password: ''})
+            localStorage.setItem("user", user.name);  
             props.onChange();
-            props.history.push("/dashboard")
+            props.history.push("/intercept")
         })
         .catch(error => {
           console.log(error)

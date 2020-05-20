@@ -51,6 +51,36 @@
   margin-top: 2%;
 }
 
+.Intercept {
+  width: 50%;
+  margin: auto;
+  margin-top: 2%;
+
+}
+
+.ContInput {
+  width: 20%;
+  margin: auto;
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Dashboard {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: space-evenly;
+}
+
+.Rank {
+  margin: auto;
+}
+
+.PostDisplay {
+  margin: auto;
+}
+
 .FooterText {
   text-align: center;
   width:100vw;

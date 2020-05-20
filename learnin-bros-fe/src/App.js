@@ -8,10 +8,11 @@ import Login from "./components/Login";
 import Landing from "./components/Landing";
 import Footer from "./components/Footer";
 import Dashboard from "./components/Dashboard";
+import Intercept from "./components/Intercept";
 import './App.css';
 
 function App() {
-  
+
   const [token, setToken] = useState(localStorage.getItem("token"))
   console.log('token in App', token)
 
@@ -32,6 +33,7 @@ function App() {
           <Route path="/register" 
           render={(props) => <Register {...props} onChange={handleLoginStateChanged} /> }
           />
+          <PrivateRoute exact path="/intercept" component={Intercept} />
           <PrivateRoute exact path="/dashboard" component={Dashboard} />
         </Switch>
         <Footer />
