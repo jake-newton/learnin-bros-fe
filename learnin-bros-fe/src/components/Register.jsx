@@ -92,7 +92,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Register = (props) => {
-        const [user, setUser] = useState({ "name": '', "password": ''})
+        const [user, setUser] = useState({ "name": ''})
     
     const changeHandler = event => {
         event.preventDefault();
@@ -108,13 +108,13 @@ const Register = (props) => {
             .then( result => {
               console.log("user", user)
               console.log("result", result)
-              setUser({name: '', password: ''})
+              setUser({name: ''})
               axiosLoginAuth()
                 .post("/auth/login", user)
                 .then(result => {
                 console.log(result)
                 localStorage.setItem("token", result.data.token);    
-                setUser({ name: '', password: ''})
+                setUser({ name: ''})
                 props.onChange();
                 props.history.push("/intercept")
                   })

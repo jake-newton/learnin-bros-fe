@@ -87,7 +87,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Login = (props) => {
-    const [user, setUser] = useState({ name: '', password: ''})
+    const [user, setUser] = useState({ 'name': ''})
 
 
     const changeHandler = event => {
@@ -95,13 +95,13 @@ const Login = (props) => {
     }
      const handleSubmit = event => {
          event.preventDefault();
-         console.log(user);
+        //  console.log(user);
          axiosLoginAuth()
             .post("/auth/login", user)
             .then(result => {
             console.log(result)
             localStorage.setItem("token", result.data.token);    
-            setUser({ name: '', password: ''})
+            setUser({ name: ''})
             localStorage.setItem("user", user.name);  
             props.onChange();
             props.history.push("/intercept")

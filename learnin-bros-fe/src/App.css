@@ -68,17 +68,47 @@
 
 .Dashboard {
   display: flex;
-  width: 80%;
+  width: 70%;
   margin: auto;
-  justify-content: space-evenly;
+  margin-top: 5%;
+  justify-content: space-around;
+  /* background-color: red; */
 }
 
 .Rank {
   margin: auto;
+  vertical-align: middle;
+}
+
+.Rank h2 {
+  height: 30%;
+  display: flex;
+}
+
+.leaderLogo {
+  width: 6%;
+  height: 6%;
 }
 
 .PostDisplay {
   margin: auto;
+}
+
+.postsColumn {
+  /* background-color: blue; */
+  margin: auto;
+
+
+}
+
+.postName {
+  font-size: 1rem;
+}
+
+.postSubmit {
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .FooterText {
